@@ -1,6 +1,6 @@
 # =========================================================================
 # Project:
-# - 미정
+# - Credit Card Churn
 #
 # Module:
 # - datapipeline
@@ -17,7 +17,8 @@
 # Created: 2026-03-06
 #
 # Updated:
-# - 2026-03-06: initial version (조동휘)
+# - 2026-03-10: initial version (조동휘)
+# - 2026-03-10: 프로젝트 명 반영 및 이미지 이름 수정 (조동휘)
 # =========================================================================
 
 # =========================================================================
@@ -27,7 +28,7 @@
 # - requirements.txt 기반 wheel 파일 생성
 # - (필요 시) 컴파일 도구를 이 단계에서만 사용
 # =========================================================================
-FROM 2nd_py_base:py312 AS builder
+FROM ccc_project_python_base:py312 AS builder
 
 # Container 작업 경로
 WORKDIR /app
@@ -47,7 +48,7 @@ RUN python -m pip wheel --no-cache-dir --wheel-dir=/wheels -r requirements.txt
 # - builder에서 만든 wheel만 설치하여 실행 환경 구성
 # - 빌드 단계 파일/캐시 제거로 이미지 용량 최소화
 # =========================================================================
-FROM 2nd_py_base:py312
+FROM ccc_project_python_base:py312
 
 # Container 작업 경로
 WORKDIR /app

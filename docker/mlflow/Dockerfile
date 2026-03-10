@@ -1,6 +1,6 @@
 # =========================================================================
 # Project:
-# - 미정
+# - Credit Card Churn
 #
 # Module:
 # - Streamlit Web Application
@@ -18,13 +18,14 @@
 #
 # Updated:
 # - 2026-03-10: initial version (조동휘)
+# - 2026-03-10: 프로젝트 명 반영 및 이미지 이름 수정 (조동휘)
 # =========================================================================
 
 
 # =========================================================================
 # Stage 1: Builder
 # =========================================================================
-FROM 2nd_py_base:py312 AS builder
+FROM ccc_project_python_base:py312 AS builder
 
 WORKDIR /app
 
@@ -36,7 +37,7 @@ RUN python -m pip wheel --no-cache-dir --wheel-dir=/wheels -r requirements.txt
 # =========================================================================
 # Stage 2: Runtime
 # =========================================================================
-FROM 2nd_py_base:py312
+FROM ccc_project_python_base:py312
 
 WORKDIR /app
 

@@ -1,6 +1,6 @@
 # =========================================================================
 # Project:
-# - 미정
+# - Credit Card Churn
 #
 # Module:
 # - Streamlit Web Application
@@ -18,6 +18,7 @@
 #
 # Updated:
 # - 2026-03-10: initial version (조동휘)
+# - 2026-03-10: upgrade package versions for latest Streamlit baseline (조동휘)
 # =========================================================================
 
 
@@ -25,7 +26,7 @@
 # Web Application
 # ------------------------------
 
-streamlit~=1.33
+streamlit~=1.55
 
 
 # ------------------------------
@@ -33,8 +34,7 @@ streamlit~=1.33
 # ------------------------------
 
 numpy>=1.26
-pandas~=2.2
-
+pandas>=2.2,<3.0
 
 # ------------------------------
 # Visualization
@@ -42,7 +42,7 @@ pandas~=2.2
 
 matplotlib~=3.9
 seaborn~=0.13
-plotly~=5.20
+plotly~=6.6
 altair~=5.3
 
 
@@ -50,16 +50,16 @@ altair~=5.3
 # ML Experiment Tracking
 # ------------------------------
 
-mlflow~=2.12
+mlflow~=3.10
 
 
 # ------------------------------
 # Streamlit Extensions
 # ------------------------------
 
-streamlit-option-menu~=0.3
-streamlit-aggrid~=1.0
-streamlit-plotly-events~=0.0
+streamlit-option-menu~=0.4
+streamlit-aggrid~=1.1
+streamlit-js-eval~=1.0
 
 
 # ------------------------------
